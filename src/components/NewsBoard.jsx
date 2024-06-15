@@ -18,9 +18,17 @@ function NewsBoard() {
       <h2 className="text-center">
         Latest <span className="badge text-bg-primary">News</span>
       </h2>
-      {news.map((news, key) => (
-          <NewsItem key={key}  title={news.title} description={news.description} src={news.urlToImage} url={news.url} />
-      ))}
+      <div className="">
+        {news.map((news, key) => (
+          <NewsItem
+            key={key}
+            title={news.title}
+            description={news.description}
+            src={news.urlToImage}
+            url={news.url}
+          />
+        ))}
+      </div>
     </div>
   );
 }
